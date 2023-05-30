@@ -1,9 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using Projeto_Gamer_29052023.Models;
+using ProjetoGamer.Models;
 
-namespace Projeto_Gamer_29052023.Controllers;
-
+namespace ProjetoGamer.Controllers;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;

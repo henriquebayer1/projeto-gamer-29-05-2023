@@ -1,4 +1,4 @@
-namespace Projeto_Gamer_29052023.Models;
+namespace ProjetoGamer.Models;
 
 public class ErrorViewModel
 {
