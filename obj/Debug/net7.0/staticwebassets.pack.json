@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\Imagem",
+      "PackagePath": "staticwebassets\\img\\Equipes"
+    },
+    {
+      "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\logo-fluminense.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\logo-fluminense.png"
+    },
+    {
       "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
