@@ -1,4 +1,4 @@
-@model Jogador 
+@model Jogador
 
 
 
@@ -7,6 +7,41 @@
     ViewData["Title"] = "Jogador";
 }
 <h1>TELA DE JOGADOR</h1>
+
+
+
+<form method="post" action="@Url.Action("Cadastrar")" enctype="multipart/form-data">
+
+    <label for="">Nome jogador</label>
+    <input type="text" name="Nome" required>
+
+    <label for="">Email</label>
+    <input type="email" name="Email" required>
+
+    <label for="">Senha</label>
+    <input type="password" name="Senha" required>
+
+    <label for="">Selecione sua equipe</label>
+    <select class="form-select" aria-label="Default select example">
+        <option selected>Open this select menu</option>
+        <option value="1">One</option>
+        <option value="2">Two</option>
+        <option value="3">Three</option>
+    </select>
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+
+
+
+
+
+
+
+
+
 
 
 <table>
@@ -28,14 +63,9 @@
                 <td>@jogador.Email</td>
                 <td></td>
                 <td>
-                    <img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px">
+                    <img src="/img/Equipes/@jogador.Equipe.Imagem" alt="Imagem da equipe @jogador.Equipe.Nome" width="50px">
                 </td>
-                <td>
-                    <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">EXCLUIR</a>
-                </td>
-                <td>
-                    <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">EDITAR</a>
-                </td>
+
             </tr>
 
         }

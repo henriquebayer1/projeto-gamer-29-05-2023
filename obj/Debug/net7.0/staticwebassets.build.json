@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "3palR+3BMHij8nsFUEwv8dP5OBu9hfacBNPne58cXjE=",
+  "Hash": "B/HRpRE4GEJ4SYLYXLgsbxc8cOmyEA4NGCAXbGqYWW0=",
   "Source": "ProjetoGamer",
   "BasePath": "_content/ProjetoGamer",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\logo-fluminense.png"
+    },
+    {
+      "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\th (1).jpg",
+      "SourceId": "ProjetoGamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer",
+      "RelativePath": "img/Equipes/th (1).jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\th (1).jpg"
     },
     {
       "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\js\\site.js",
