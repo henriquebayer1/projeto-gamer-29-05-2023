@@ -1,20 +1,15 @@
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Logging;
 using ProjetoGamer.Infra;
+using ProjetoGamer.Models;
 
 namespace ProjetoGamer.Controllers
 {
     [Route("[controller]")]
-    public class Jogador : Controller
+    public class JogadorController : Controller
     {
         private readonly ILogger<Jogador> _logger;
 
-        public Jogador(ILogger<Jogador> logger)
+        public JogadorController(ILogger<Jogador> logger)
         {
             _logger = logger;
         }
@@ -23,9 +18,13 @@ namespace ProjetoGamer.Controllers
         Context c = new Context();
 
 
-        [Route("InfoJogador")] //http://localhost/Jogador/InfoJogador
+        [Route("Listar")] //http://localhost/Jogador/Listar
         public IActionResult Index()
         {
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
+
+
+
             ViewBag.Jogador = c.Jogador.ToList();
             ViewBag.Equipe = c.Equipe.ToList();
 
@@ -34,46 +33,27 @@ namespace ProjetoGamer.Controllers
         }
 
 
-    [Route("Cadastrar")]
+        [Route("Cadastrar")]
         public IActionResult Cadastrar(IFormCollection form)
         {
             Jogador novoJogador = new Jogador();
 
-            novoJogador.User = form["Nome"].ToString();
-            // novaEquipe.Imagem = form["Imagem"].ToString();
+            
 
-            if (form.Files.Count > 0)
-            {
+            novoJogador.Nome = form["Nome"].ToString();
+            // novoJogador.Imagem = form["Imagem"].ToString();
 
-                var file = form.Files[0];
+            novoJogador.Email = form["Email"].ToString();
 
-                var folder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot/img/Equipes");
+            novoJogador.Senha = form["Senha"].ToString();
 
-                if (!Directory.Exists(folder))
-                {
-                    Directory.CreateDirectory(folder);
-                }
+            novoJogador.IdEquipe = int.Parse(form["IdEquipe"].ToString());
 
-                var path = Path.Combine(folder, file.FileName);
-
-                using (var stream = new FileStream(path, FileMode.Create))
-                {
-                     file.CopyTo(stream);
-                }
-
-                novaEquipe.Imagem = file.FileName;
-            }
-            else
-            {
-                novaEquipe.Imagem = "padrao.png";
-
-            }
-
-            c.Equipe.Add(novaEquipe);
+            c.Jogador.Add(novoJogador);
 
             c.SaveChanges();
 
-            return LocalRedirect("~/Equipe/Listar");
+            return LocalRedirect("~/Jogador/Listar");
         }
 
 
@@ -83,9 +63,67 @@ namespace ProjetoGamer.Controllers
 
 
 
+        [Route("Excluir/{id}")]
+        public IActionResult Excluir(int id)
+        {
+            Jogador jogadorBuscado = c.Jogador.First(j => j.IdJogador == id);
+            
+          
+
+            c.Jogador.Remove(jogadorBuscado);
+
+            c.SaveChanges();
 
 
 
+        return LocalRedirect("~/Jogador/Listar");
+        }
+
+    [Route("Editar/{id}")]
+    public IActionResult Editar(int id)
+    {
+             Jogador jogadorBuscado = c.Jogador.First(j => j.IdJogador == id);
+    
+    
+            ViewBag.Jogador = jogadorBuscado;
+            ViewBag.Equipe = c.Equipe.ToList();
+    
+    return View("Edit");
+    
+    }
+
+
+
+        [Route("Atualizar")]
+        public IActionResult Atualizar(IFormCollection form)
+        {
+
+            Jogador novoJogador = new Jogador();
+
+          
+            novoJogador.IdJogador = int.Parse(form["IdJogador"].ToString());
+
+            novoJogador.Nome = form["Nome"].ToString();
+            novoJogador.Email = form["Email"].ToString();
+            novoJogador.Senha = form["Senha"].ToString();
+            novoJogador.IdEquipe = int.Parse(form["IdEquipe"].ToString());
+
+            Jogador jogadorBuscado = c.Jogador.First(x => x.IdJogador == novoJogador.IdJogador);
+
+
+            jogadorBuscado.Nome = novoJogador.Nome;
+            jogadorBuscado.Email = novoJogador.Email;
+            jogadorBuscado.Senha = novoJogador.Senha;
+            jogadorBuscado.IdEquipe = novoJogador.IdEquipe;
+
+            c.Jogador.Update(jogadorBuscado);
+
+            c.SaveChanges();
+
+            return LocalRedirect("~/Jogador/Listar");
+
+
+        }
 
 
 

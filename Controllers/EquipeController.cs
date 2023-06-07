@@ -27,6 +27,7 @@ namespace ProjetoGamer.Controllers
         public IActionResult Index()
         {
 
+            ViewBag.UserName = HttpContext.Session.GetString("UserName");
 
             ViewBag.Equipe = c.Equipe.ToList();
             return View();
