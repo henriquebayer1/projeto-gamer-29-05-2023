@@ -4,6 +4,12 @@
 @{ViewData["Title"] = "Edit";}
 
 
+@if (ViewBag.UserName == null)
+{
+    <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+}
+else{
+
 <h1>Edicao de Jogadores</h1>
 
 <form method="post" action="@Url.Action("Atualizar")">
@@ -42,3 +48,4 @@
 
 
 </form>
+}

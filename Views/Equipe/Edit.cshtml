@@ -3,7 +3,11 @@
 
 @{ViewData["Title"] = "Edit";}
 
-
+@if (ViewBag.UserName == null)
+{
+    <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+}
+else{
 
 
 
@@ -24,3 +28,4 @@
 
 
 </form>
+}

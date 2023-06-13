@@ -8,6 +8,11 @@
 }
 <h1>TELA DE JOGADOR</h1>
 
+@if (ViewBag.UserName == null)
+{
+    <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+}
+else{
 
 
 <form method="post" action="@Url.Action("Cadastrar")">
@@ -38,7 +43,7 @@
 </form>
 
 
-
+}
 
 
 
