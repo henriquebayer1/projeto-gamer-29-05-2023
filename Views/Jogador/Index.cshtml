@@ -6,43 +6,75 @@
     //aqui é o titulo que fica na página, titulo de browser
     ViewData["Title"] = "Jogador";
 }
-<h1>TELA DE JOGADOR</h1>
 
-@if (ViewBag.UserName == null)
+
+
+
+
+<!-- MAIN -->
+       @if (ViewBag.UserName == null)
 {
     <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
 }
 else{
+    <main>
 
+        <section class="container-grid cadastro-equipes">
+            
+            
+            <form method="post" action="@Url.Action("Cadastrar")" class="frm-cad-equipe">
+                <div class="cadequipe-titulo">
+                    <h1>Cadastro de Jogadores</h1>
+                    <hr>
+                </div>
 
-<form method="post" action="@Url.Action("Cadastrar")">
-
-    <label for="">Nome jogador</label>
-    <input type="text" name="Nome" required>
-
-    <label for="">Email</label>
-    <input type="email" name="Email" required>
-
-    <label for="">Senha</label>
-    <input type="password" name="Senha" required>
-
-    <label for="">Equipe</label>
-    <select name="IdEquipe" id="IdEquipe">
-
-        <option value="0">Selecione uma opção: </option>
+                
+                <select name="IdEquipe" class="campo-entrada" id="equipe-select">
+                     <option value="0">Selecione o seu time:</option>
 
         @foreach (Equipe equipe in ViewBag.Equipe)
         {
             <option value="@equipe.IdEquipe">@equipe.Nome</option>
         }
+                </select>
+                
+                <input class="campo-entrada" type="text" name="Nome" id="nome-jogador" placeholder="Digite o nome do Jogador:">
+                <input class="campo-entrada" type="email" name="Email" id="email-jogador" placeholder="Digite o Email do Jogador:">
+                <input class="campo-entrada" type="password" name="Senha" id="senha" placeholder="Digite a Senha:">
+                
+                <button type="submit">Cadastrar</button>
+            </form>
 
-    </select>
+            <!-- TABELA CADASTRO DE EQUIPES -->
 
-    <button type="submit">Cadastrar</button>
-
-</form>
-
-
+            <table>
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Equipe</th>
+                        <th>&spades;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (Jogador jogador in ViewBag.Jogador)
+        {
+                    <tr>
+                         <td>@jogador.IdJogador</td>
+                <td>@jogador.Nome</td>
+                <td>@jogador.Email</td>
+                <td>@jogador.Equipe.Nome</td>
+                        <td><a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador"><img class="yellow-trash" src="~/assets/trash.png" alt=""></a></td>
+                        <td>
+                             <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
+                        </td>
+                    </tr>
+        }
+                </tbody>
+            </table>
+        </section>
+    </main>
 }
 
 
@@ -53,40 +85,13 @@ else{
 
 
 
-<table>
-    <thead>
-        <th>Id</th>
-        <th>Nome</th>
-        <th>Email</th>
-        <th>Imagem</th>
-        <th>Acoes</th>
-    </thead>
 
-    <tbody>
-        @*Equipe é um objeto chamar ele como tal, vira o objeto "equipe"*@
-        @foreach (Jogador jogador in ViewBag.Jogador)
-        {
-            <tr>
-                @*para utilizar um objeto dentro de uma tag HTML tem que chamar pelo arroba*@
-                <td>@jogador.IdJogador</td>
-                <td>@jogador.Nome</td>
-                <td>@jogador.Email</td>
-                <td>
-                    <img src="/img/Equipes/@jogador.Equipe.Imagem" alt="Imagem da equipe @jogador.Equipe.Nome" width="50px">
-                </td>
-                <td>
-                    <a asp-area="" asp-controller="Jogador" asp-action="Excluir" asp-route-id="@jogador.IdJogador">Excluir</a>
-                </td>
-                <td>
-                    <a asp-area="" asp-controller="Jogador" asp-action="Editar" asp-route-id="@jogador.IdJogador">Editar</a>
-                </td>
 
-            </tr>
 
-        }
 
-    </tbody>
-</table>
+
+
+
 
 
 

@@ -241,6 +241,18 @@
       "PackagePath": "staticwebassets\\assets\\vector-user.svg"
     },
     {
+      "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\Header-Footer.css",
+      "PackagePath": "staticwebassets\\css\\Header-Footer.css"
+    },
+    {
+      "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\equipes.css",
+      "PackagePath": "staticwebassets\\css\\equipes.css"
+    },
+    {
+      "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\jogadores.css",
+      "PackagePath": "staticwebassets\\css\\jogadores.css"
+    },
+    {
       "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\login.css",
       "PackagePath": "staticwebassets\\css\\login.css"
     },
@@ -343,6 +355,10 @@
     {
       "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\images\\noticia8.png",
       "PackagePath": "staticwebassets\\images\\noticia8.png"
+    },
+    {
+      "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\Frame 9.png",
+      "PackagePath": "staticwebassets\\img\\Equipes\\Frame 9.png"
     },
     {
       "Id": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\Imagem",

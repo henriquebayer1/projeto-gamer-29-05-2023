@@ -1,0 +1,59 @@
+@model Equipe
+
+@{
+    //aqui é o titulo que fica na página, titulo de browser
+    ViewData["Title"] = "Equipe";
+}
+<h1>TELA DE EQUIPES</h1>
+
+@if (ViewBag.UserName == null)
+{
+    <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
+}
+else{
+
+<form method="post" action="@Url.Action("Cadastrar")"  enctype="multipart/form-data">
+
+    <label for="">Nome</label>
+    <input type="text" name="Nome" required>
+
+    <label for="">Imagem</label>
+    <input type="file" name="Imagem">
+
+    <button type="submit">Cadastrar</button>
+
+</form>
+
+<table>
+    <thead>
+        <th>Id</th>
+        <th>Nome</th>
+        <th>Imagem</th>
+        <th>Acoes</th>
+    </thead>
+
+    <tbody>
+        @*Equipe é um objeto chamar ele como tal, vira o objeto "equipe"*@
+        @foreach (Equipe equipe in ViewBag.Equipe)
+        {
+            <tr>
+                @*para utilizar um objeto dentro de uma tag HTML tem que chamar pelo arroba*@
+                <td>@equipe.IdEquipe</td>
+                <td>@equipe.Nome</td>
+                <td>
+                    <img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px">
+                </td>
+                <td>
+                    <a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe">EXCLUIR</a>
+                </td>
+                <td>
+                    <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">EDITAR</a>
+                </td>
+            </tr>
+
+        }
+
+    </tbody>
+</table>
+
+}

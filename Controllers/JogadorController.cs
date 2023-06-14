@@ -82,6 +82,7 @@ namespace ProjetoGamer.Controllers
     [Route("Editar/{id}")]
     public IActionResult Editar(int id)
     {
+        ViewBag.UserName = HttpContext.Session.GetString("UserName");
              Jogador jogadorBuscado = c.Jogador.First(j => j.IdJogador == id);
     
     

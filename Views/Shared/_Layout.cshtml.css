@@ -1,48 +1,149 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+﻿
 
-a.navbar-brand {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
-}
 
-a {
-  color: #0077cc;
-}
 
-.btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
 
-.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
-}
 
-.border-top {
-  border-top: 1px solid #e5e5e5;
-}
-.border-bottom {
-  border-bottom: 1px solid #e5e5e5;
-}
 
-.box-shadow {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
-}
 
-button.accept-policy {
-  font-size: 1rem;
-  line-height: inherit;
-}
 
-.footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medias Queries */
+
+@media screen and (min-width: 992px) {
+
+
+  .header {
+    position: static;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+
+  .header label {
+    display: none;
+  }
+
+  header .header-top {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #F9AA01;
+  }
+
+  .header-top-flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+  }
+
+  header .header-top span {
+    margin-right: 40px;
+    font-size: .8rem;
+    /* border: 1px solid white; */
+  }
+
+  header .header-top span img {
+    margin-right: 10px;
+  }
+
+  header .header-top .social-box {
+    margin-right: 0;
+  }
+
+
+  header .header-bottom {
+    padding: 10px 0;
+  }
+
+  /* Menu */
+  header .nav-bkg {
+    position: static;
+    /* justify-content: space-between; */
+    width: 30%;
+    height: auto;
+    padding: 0;
+    background-image: none;
+    /* border: 1px solid red; */
+  }
+
+  header .nav-bkg nav {
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid white; */
+  }
+
+  .header nav a {
+    width: auto;
+    height: auto;
+    padding: 10px;
+    border: none;
+    /* border: 1px solid greenyellow; */
+  }
+
+
+  .header nav a.phone-box,
+  .header nav a.mail-box {
+    display: none;
+  }
+
+  .header nav a:hover {
+    background-color: transparent;
+    color: #F9AA01;
+  }
+
+  /* .header nav .social-box {
+    position: static;
+    
+    border: 1px solid yellow;
+} */
+  .header nav .social-box {
+    display: none;
+  }
+
+  header .icons-header-bkg {
+    position: static;
+    width: auto;
+    height: auto;
+    background-image: none;
+  }
+
+
+  header .icons-header {
+    height: auto;
+    flex-direction: revert;
+    width: 100px;
+    padding: 10px;
+    background-image: none;
+    /* border: 1px solid red; */
+  }
+
+
+
 }
