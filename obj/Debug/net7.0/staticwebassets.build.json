@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "uhMWsNiQZUsIyj1bXHJFe0waBzNRfFa31+Jase2shS4=",
+  "Hash": "9IR+v+1wT1k6f+mDoVDlCb638vd+Zyw7cUsc4KkbUnY=",
   "Source": "ProjetoGamer",
   "BasePath": "_content/ProjetoGamer",
   "Mode": "Default",
@@ -1086,6 +1086,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\Header-Footer.css"
+    },
+    {
+      "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\jogadorEdit.css",
+      "SourceId": "ProjetoGamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer",
+      "RelativePath": "css/jogadorEdit.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\jogadorEdit.css"
     },
     {
       "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\jogadores.css",
