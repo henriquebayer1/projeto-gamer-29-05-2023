@@ -12,12 +12,16 @@
 
 
 <!-- MAIN -->
+
+<head><link rel="stylesheet" href="~/css/jogadores.css"></head>
+
        @if (ViewBag.UserName == null)
 {
     <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
 }
 else{
     <main>
+<head><link rel="stylesheet" href="~/css/jogadores.css"></head>
 
         <section class="container-grid cadastro-equipes">
             
@@ -54,7 +58,7 @@ else{
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Equipe</th>
-                        <th>&spades;</th>
+                        <th>Acoes</th>
                     </tr>
                 </thead>
                 <tbody>

@@ -1,7 +1,10 @@
 @model Equipe
 
 
+
 @{ViewData["Title"] = "Edit";}
+
+
 
 @if (ViewBag.UserName == null)
 {
@@ -10,22 +13,152 @@
 else{
 
 
+<main>
+    <head><link rel="stylesheet" href="~/css/EquipeEdit.css"></head>
 
-<h1>Edicao de Equipe</h1>
+    <section class="container-grid cadastro-equipes">
 
-<form method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data">
+    <form method="post" action="@Url.Action("Atualizar")" enctype="multipart/form-data" class="frm-cad-equipe">
+        <div class="cadequipe-titulo">
+            <h1>Edicao de Equipes</h1>
+            <hr>
+        </div>
+
+       <input type="hidden"  name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
+
+        <input class="campo-entrada" type="text" name="Nome" value="@ViewBag.Equipe.Nome">
+        <label class="foto" for="foto-file">
+            Nenhuma imagem selecionada...
+        <input class="campo-entrada" id="foto-file" type="file" name="Imagem" value="@ViewBag.Equipe.Imagem">
+        </label>
+
+        <button>Atualizar</button>
 
 
-<input type="hidden"  name="IdEquipe" value="@ViewBag.Equipe.IdEquipe">
 
-<label for=""></label>
-<input type="text" name="Nome" value="@ViewBag.Equipe.Nome">
-
-<label for=""></label>
-<input type="file" name="Imagem" value="@ViewBag.Equipe.Imagem">
-
-<button type="submit">Atualizar</button>
-
-
+<!-- <select class="equipeid" id="equipeid">
+                    <option value="">Selecione uma Equipe</option>
+                    <option value="x">Equipe X</option>
+                    <option value="y">Equipe Y</option>
+                </select> -->
 </form>
+</section>
+</main>
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

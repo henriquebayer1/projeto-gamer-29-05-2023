@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "9IR+v+1wT1k6f+mDoVDlCb638vd+Zyw7cUsc4KkbUnY=",
+  "Hash": "0GPYXOQYXgKoq9yQp8G5o5Lwwbnla5+eL/PuESpCcu4=",
   "Source": "ProjetoGamer",
   "BasePath": "_content/ProjetoGamer",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\assets\\Botao_voltar_ao_topo.svg"
+    },
+    {
+      "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\assets\\edit.svg",
+      "SourceId": "ProjetoGamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer",
+      "RelativePath": "assets/edit.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\edit.svg"
     },
     {
       "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\assets\\envelope-icon.png",
@@ -1054,6 +1071,23 @@
       "OriginalItemSpec": "wwwroot\\assets\\vector-user.svg"
     },
     {
+      "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\EquipeEdit.css",
+      "SourceId": "ProjetoGamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer",
+      "RelativePath": "css/EquipeEdit.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\EquipeEdit.css"
+    },
+    {
       "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\css\\equipes.css",
       "SourceId": "ProjetoGamer",
       "SourceType": "Discovered",
@@ -1564,6 +1598,23 @@
       "OriginalItemSpec": "wwwroot\\images\\noticia8.png"
     },
     {
+      "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\bayerdemunique.webp",
+      "SourceId": "ProjetoGamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer",
+      "RelativePath": "img/Equipes/bayerdemunique.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\bayerdemunique.webp"
+    },
+    {
       "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\download.png",
       "SourceId": "ProjetoGamer",
       "SourceType": "Discovered",
@@ -1630,6 +1681,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\img\\Equipes\\logo-fluminense.png"
+    },
+    {
+      "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\logo-senai-1.jpg",
+      "SourceId": "ProjetoGamer",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\",
+      "BasePath": "_content/ProjetoGamer",
+      "RelativePath": "img/Equipes/logo-senai-1.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\img\\Equipes\\logo-senai-1.jpg"
     },
     {
       "Identity": "C:\\Users\\45922978810\\Desktop\\ProjetoGamer\\wwwroot\\img\\Equipes\\th (1).jpg",

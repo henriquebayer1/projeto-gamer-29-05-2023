@@ -11,7 +11,10 @@
     <a asp-area="" asp-controller="Login" asp-action="Index">Login</a>
 }
 else{
+<head>
+<link rel="stylesheet" href="~/css/equipes.css">
 
+</head>
 
     <!-- MAIN -->
     <main>
@@ -28,7 +31,7 @@ else{
                 
                 <input class="campo-entrada" type="text" name="Nome" placeholder="Digite o nome da sua equipe:">
                 <label class="foto" for="foto-file">
-                    Nenuma imagem selecionada...
+                    
                     <input  type="file" name="Imagem" id="foto-file">
                 </label>
                 
@@ -51,7 +54,7 @@ else{
                         <th>Id</th>
                         <th>Nome</th>
                         <th>Foto</th>
-                        <th>&spades;</th>
+                        <th>Acoes</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,7 +66,7 @@ else{
                         <td><img src="/img/Equipes/@equipe.Imagem" alt="Imagem da equipe @equipe.Nome" width="50px"></td>
                       <td><a asp-area="" asp-controller="Equipe" asp-action="Excluir" asp-route-id="@equipe.IdEquipe"><img class="yellow-trash" src="~/assets/trash.png" alt=""></a> </td>
                       <td>
-                    <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe">EDITAR</a>
+                    <a asp-area="" asp-controller="Equipe" asp-action="Editar" asp-route-id="@equipe.IdEquipe"><img class="yellow-pencil" src="~/assets/edit.svg" alt=""></a>
                 </td>
                     </tr>
                     }
